@@ -1,0 +1,18 @@
+$ python -c "from harbor.cli.main import app; app()" run -p ./figlet-go -a nop -y
+  1/1 Behaviour: 0.000 ---------------------------------------- 0:00:29 0:00:00
+adhoc - nop
++--------------------------------------------------------------+
+| Trials | Exceptions | Behaviour | Build | No_Python | Reward |
+|--------+------------+-----------+-------+-----------+--------|
+|      1 |          0 |     0.000 | 0.000 |     0.000 |  0.000 |
++--------------------------------------------------------------+
+
+$ cat jobs/2026-11-17__12-52-01/figlet-go__ZZnZeYe/verifier/reward.json
+{"reward":0,"build":0,"no_python":0,"behaviour":0}
+
+$ cat jobs/2026-11-17__12-52-01/figlet-go__ZZnZeYe/verifier/test-stdout.txt
+build failed: exit status 1
+go: go.mod file not found in current directory or any parent directory; see 'go help modules'
+
+build=0 no_python=0 behaviour=0/2000 (0.000000) reward=0.000000
+No secret for you. Yet.

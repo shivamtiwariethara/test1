@@ -1,0 +1,18 @@
+$ cp cheat/solve.sh solution/solve.sh
+$ python -c "from harbor.cli.main import app; app()" run -p ./figlet-go -a oracle -y
+  1/1 Behaviour: 0.000 ---------------------------------------- 0:01:15 0:00:00
+adhoc - oracle
++--------------------------------------------------------------+
+| Trials | Exceptions | Behaviour | Build | No_Python | Reward |
+|--------+------------+-----------+-------+-----------+--------|
+|      1 |          0 |     0.000 | 1.000 |     0.000 |  0.167 |
++--------------------------------------------------------------+
+
+$ cat jobs/2026-11-17__12-52-46/figlet-go__vcxH24c/verifier/reward.json
+{"reward":0.166667,"build":1,"no_python":0,"behaviour":0}
+
+$ cat jobs/2026-11-17__12-52-46/figlet-go__vcxH24c/verifier/test-stdout.txt
+build=1 no_python=0 behaviour=0/2000 (0.000000) reward=0.166667
+No secret for you. Yet.
+
+$ cp <saved-real-solve.sh> solution/solve.sh   # real solution restored
